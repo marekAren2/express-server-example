@@ -1,6 +1,17 @@
-<h1>This is my hbd first test page{{content}}</h1>
+<h1>This hbd test page: {{content}}</h1>
 <h2>{{obiekt.name}}</h2>
 <h3>{{title}}</h3>
+<h3>{{author}}</h3>
+<h3>Jak przekazac drugi obiekt: content 2: {{content2}} </h3>
+{{!-- // czy ta wartosc nie jest true?! --}}
+pod spodem if:
 {{#if obiekt.displayTitle}}
     <p>This page content</p>
+{{else}}
+    nie dziala warunek
 {{/if }}
+
+{{#each names}}
+{{!-- this to co jest tym elementem --}}
+<li>{{this}}</li>
+{{/each }}

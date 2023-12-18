@@ -1,0 +1,36 @@
+
+<div class="container">
+    <h2>Single post</h2>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title"> {{title}}</h2>
+                <p class="card-text">{{content}}</p>
+                <p class="card-text">{{author}}</p>
+                <a href="" class="btn btn-primary">More</a>
+
+
+
+<div class="card" style="width: 18rem;">
+  {{!-- <img src="../public\images\logo.png" class="card-img-top" alt="..."> --}}
+  {{!-- <img src="../../public/images/logo.png" class="card-img-top" alt="..."> --}}
+    {{!-- // ze wzgledu na: app.use("/files",express.static('public')); --}}
+  <img src="/files/images/logo.png" class="card-img-top" alt="...">
+
+  
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{content}}</p>
+    {{!-- // blog prowadzi do /blog --}}
+    {{!-- <a href="blog" class="btn btn-primary">Back</a><br> --}}
+    <a href="/blog" class="btn btn-primary">Back</a><br>
+    {{!-- <a href="../blog" class="btn btn-primary">Back</a><br> --}}
+    {{!-- // zeby nas przeniosł na odpowiedni adres --}}
+    <a href="/blog/edit/{{_id}}" class="btn btn-primary">Edit</a>
+    <a href="/blog/delete/{{_id}}" class="btn btn-danger">Delete</a>
+  </div>
+</div>
+
+
+            </div>
+        </div>
+</div>

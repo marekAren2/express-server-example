@@ -1,0 +1,58 @@
+<div class="container">
+    <h2>Post list</h2>
+    {{#each posts}}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2 class="card-title"> {{title}}</h2>
+                <p class="card-text">{{content}}</p>
+                <p class="card-text">{{author}}</p>
+                <a href="" class="btn btn-primary">More</a>
+
+ {{!--  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> {{title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{author}}</h6>
+    <p class="card-text">{{content}}</p>
+    <a href="#" class="card-link">{{author}}</a>
+    <a href="#" class="card-link btn btn-primary">More</a>
+  </div>
+</div>
+ --}}
+
+
+<div class="card" style="width: 18rem;">
+  {{!-- <img src="../public\images\logo.png" class="card-img-top" alt="..."> --}}
+  {{!-- <img src="../../public/images/logo.png" class="card-img-top" alt="..."> --}}
+    {{!-- // ze wzgledu na: app.use("/files",express.static('public')); --}}
+  <img src="/files/images/logo.png" class="card-img-top" alt="...">
+
+  
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{content}}</p>
+    <a href="blog/{{_id}}" class="btn btn-primary">Go somewhere {{author}}</a>
+  </div>
+</div>
+
+
+            </div>
+        </div>
+    {{/each}}
+    <a href="/blog/add" class="btn btn-success">Add post</a>
+</div>
+
+
+
+
+{{!-- .container
+	H2 Post list
+	
+	{{#each posts}}
+		.card .mb-3 //margines dolny 3px
+			.card-body
+				H2.card-title {{title}}
+				p.card-text {{content}}
+				p.card-text {{author}}
+				a.btn btn-primary{More
+	{{/each}} --}}
+	
