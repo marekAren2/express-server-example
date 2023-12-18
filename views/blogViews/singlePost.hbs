@@ -6,7 +6,8 @@
                 <h2 class="card-title"> {{title}}</h2>
                 <p class="card-text">{{content}}</p>
                 <p class="card-text">{{author}}</p>
-                <a href="" class="btn btn-primary">More</a>
+                
+                {{!-- <a href="" class="btn btn-primary">More</a> --}}
 
 
 
@@ -14,7 +15,8 @@
   {{!-- <img src="../public\images\logo.png" class="card-img-top" alt="..."> --}}
   {{!-- <img src="../../public/images/logo.png" class="card-img-top" alt="..."> --}}
     {{!-- // ze wzgledu na: app.use("/files",express.static('public')); --}}
-  <img src="/files/images/logo.png" class="card-img-top" alt="...">
+  
+  {{!-- <img src="/files/images/logo.png" class="card-img-top" alt="..."> --}}
 
   
   <div class="card-body">
@@ -22,7 +24,7 @@
     <p class="card-text">{{content}}</p>
     {{!-- // blog prowadzi do /blog --}}
     {{!-- <a href="blog" class="btn btn-primary">Back</a><br> --}}
-    <a href="/blog" class="btn btn-primary">Back</a><br>
+    <a href="/blog" class="btn btn-primary">Back</a>
     {{!-- <a href="../blog" class="btn btn-primary">Back</a><br> --}}
     {{!-- // zeby nas przeniosł na odpowiedni adres --}}
     <a href="/blog/edit/{{_id}}" class="btn btn-primary">Edit</a>
