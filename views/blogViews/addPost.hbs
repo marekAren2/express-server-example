@@ -2,11 +2,11 @@
     <h2>Add Post</h2>
     {{!-- // metoda POST i action wyslij do /blog/add --}}
     <form action="/blog/add" method="post">
-        {{!-- kontenetr na etykiety --}}
+        {{!-- kontener na etykiety --}}
         <div class="mb-3">
             <label for="title" class="form-label">Post title</label>
             {{!-- // name b.wazne - musi odpowiadac nazwie pola z modelu --}}
-            {{!-- // body request będzie skladalo się z pol i wartosci: z name(atrybut Html) z form  --}}
+            {{!-- // body request będzie składało się z pol i wartosci: z name(atrybut Html) z form  --}}
             <input type="text" class="form-control" id="title" name="title">
         </div>
         <div class="mb-3">

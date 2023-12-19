@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Add user</h2>
+
+    {{#if error}}
+        {{!-- // bootstrap - owy alert wklejamy --}}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+    {{/if}}
+
+    
+    <form action="/user/signup" method="post">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" 
+            name="name" 
+            value="{{user.name}}" placeholder="">
+            <label for="name">User name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" 
+            name="email" 
+            value=placeholder="name@example.com" >
+            <label for="email" hidden >User email </label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" 
+            name = "password" placeholder="Password">
+            <label for="password">Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary ">SignUp</button>
+    </form>
+</div>

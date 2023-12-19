@@ -20,14 +20,13 @@ mongoose.connection.once('open', () => {
 })
 
 
-
+.then()
 
 // import modelu
 const Post = require('./app/models/PostModel');
 // import router sciezka skopiowana inna bedzie działac ? nie działaja slash
 // const blogRouter = require('app\router\blogRouter.js');
 const blogRouter = require('./app/router/blogRouter');
-const userRouter = require('./app/router/userRouter');
  
 
 // app.use(express.static('public'))
@@ -68,7 +67,7 @@ Post.findById(req.params.id).then((postOne)=>{
         })
     }).catch((err)=>{
         res.send(err)
-        
+        res.
     })
 });
 
@@ -139,8 +138,6 @@ app.get('/', function(req, res){
 /*   Routes */
 // set przedrostek /blog dla wpisow w blogRouter
 app.use('/blog', blogRouter);
-// przekazujemy referencje(n.func) do obiektu routera uzytkownika
-app.use('/user', userRouter);
 
 app.listen(8080, function(){
     console.log('Serwer Node.js działa');

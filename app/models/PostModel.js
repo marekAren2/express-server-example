@@ -11,3 +11,4 @@ const Post = new mongoose.Schema({
 // inny rodzaj export-u? bez klamry? czy wtedy tez mozna dla 1 funkcji?
 // konwersja na model wg dokumentacji czy export?
 module.exports = mongoose.model('Post', Post)
+

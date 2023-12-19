@@ -1,5 +1,5 @@
 const Post = require('../models/PostModel')
-const mongoose = require('mongoose')
+
 
 // export odwołuje sie do pliku bo nie ma funkcji o tej samej nazwie a index : jest z : czym jest?
 
@@ -37,7 +37,7 @@ module.exports = {
 		})
 		.catch((err)=>{
 			res.send(err);
-			
+						
 			
 		})
 
