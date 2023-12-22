@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const authMiddleware = require('../middlewares/authMiddleware')
+
 // zla sciezka, bo jestesmy w tym samym nadrzednym?!
 // const postController = require('./app/controllers/postController');
 const postController = require('../controllers/postController');

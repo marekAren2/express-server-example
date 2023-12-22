@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const hbs = require('express-handlebars');
 const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
+
 // z dokumentacji ?
 // import { engine } from 'express-handlebars';
 
@@ -40,6 +42,8 @@ app.engine("hbs",hbs.engine({ extname: "hbs" }));
 app.set("view engine", "hbs");
 // config do express ,pozwala czytac dane z ciała zapytania (req.body)
 app.use(express.urlencoded({extended: true}));
+// w middleware globalnym wywolujemy funkcje zwracana przez cookieParser
+app.use(cookieParser());
 // obiekt nie tablica dlatego: obiekt ma klucze
 
 // app.get("/mongoose", function(req,res){

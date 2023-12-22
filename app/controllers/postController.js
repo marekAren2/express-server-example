@@ -1,4 +1,5 @@
 const Post = require('../models/PostModel')
+const User = require('../models/UserModel');
 
 
 // export odwołuje sie do pliku bo nie ma funkcji o tej samej nazwie a index : jest z : czym jest?
@@ -42,12 +43,13 @@ module.exports = {
 		})
 
 	},
-	
+	// przy dodawaniu new post zmiana Arek na odniesienie do id skad mozemy je wziazc?
 	create: (req,res) => {
 		console.log(req.body);
 		//... operator spread kopia stanu poprzedniego, jakiego?!
 		// do tego nowo tworzonego obiekt + author :chwilowo 'Arek'
-		const newPost = new Post({...req.body, author: 'Arek'})
+		const newPost = new Post({...req.body, author: res.locals.userId})
+		
 		// zeby ten doc zostal save:
 		newPost.save();
 		// after add post -redirect do root www:

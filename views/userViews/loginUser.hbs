@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Add user</h2>
+    <h2>Login user</h2>
 
     {{#if error}}
         {{!-- // bootstrap - owy alert wklejamy --}}
@@ -57,27 +57,22 @@
             {{message}}
         </div>
     {{/if}}
-
-    
-    <form action="/user/signup" method="post">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="name" 
-            name="name" 
-            value="{{user.name}}" placeholder="">
-            <label for="name">User name</label>
-        </div>
+    {{!-- // robi submit form pod ten link? --}}
+    {{!-- <form action="/dupa/login" method="post"> --}}
+    <form action="/user/login" method="post">
+      {{!-- // zostaje email i password --}}
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="email" 
             name="email" 
             value="{{user.email}}" placeholder="name@example.com" >
-            <label for="email" hidden >User email </label>
+            <label for="email"  >User email </label>
         </div>
         <div class="form-floating">
             <input type="password" class="form-control" id="password" 
             name = "password" 
             value="{{user.password}}" placeholder="Password">
-            <label for="password">Password</label>
+            <label for="password" hidden >Password</label>
         </div>
-        <button type="submit" class="btn btn-primary ">SignUp</button>
+        <button type="submit" class="btn btn-primary ">Login</button>
     </form>
 </div>

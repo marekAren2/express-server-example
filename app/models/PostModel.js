@@ -3,7 +3,13 @@ const mongoose = require('mongoose');
 const Post = new mongoose.Schema({
     title: String,
     content: String,
-    author: String
+    // author: String,
+    author: {
+        // to referuje wprost do tych identyfikatorow z bazy
+        type: mongoose.Schema.Types.ObjectId,
+        //referuje do naszego modelu zdefiniowanego w userModel.js
+        ref: 'User'
+    },
 },
 {timestamps: true}
 );
